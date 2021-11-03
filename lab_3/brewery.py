@@ -21,9 +21,11 @@ class Brewery:
     updated_at: datetime
     created_at: datetime
 
-    def __init__(self, id: str, name: str, brewery_type: str, street: str, address_2: str, address_3: str,
-                 city: str, state: str, county_province: str, postal_code: str, country: str, longitude: str,
-                 latitude: str, phone: str, website_url: str, updated_at: datetime, created_at: datetime):
+    def __init__(self, id: str, name: str, brewery_type: str, street: str,
+                 address_2: str, address_3: str, city: str, state: str,
+                 county_province: str, postal_code: str, country: str,
+                 longitude: str, latitude: str, phone: str, website_url: str,
+                 updated_at: datetime, created_at: datetime):
         self.id = id
         self.name = name
         self.brewery_type = brewery_type
@@ -43,4 +45,7 @@ class Brewery:
         self.created_at = created_at
 
     def __str__(self) -> str:
-        return '%s(%s)' % (type(self).__name__, ', '.join('%s=%s' % item for item in vars(self).items()))
+        return '%s(%s)' % (
+            type(self).__name__,
+            ', '.join('%s' % vars(self)[item] for item in vars(self))
+        )
