@@ -8,4 +8,7 @@ class Student:
         return self._marks > 50
 
     def __str__(self) -> str:
-        return '%s(%s)' % (type(self).__name__, ', '.join('%s' % vars(self)[item] for item in vars(self)))
+        return '%s(%s)' % (
+            type(self).__name__,
+            ', '.join('%s' % vars(self)[item] for item in vars(self))
+        )

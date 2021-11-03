@@ -25,9 +25,15 @@ b3 = Book(l2, datetime.datetime(1997, 2, 11), 'Katarzyna', 'Robert', 200)
 b4 = Book(l1, datetime.datetime(2006, 11, 23), 'Tomasz', 'Tomasz', 134)
 b5 = Book(l1, datetime.datetime(2011, 7, 3), 'Magdalena', 'Magdalena', 476)
 
-e1 = Employee('Robert', 'Robert', datetime.datetime(2020, 5, 17), datetime.datetime(1970, 1, 17), 'Katowice', 'Miejska', '12-345', '808707606')
-e2 = Employee('Tomasz', 'Tomasz', datetime.datetime(2012, 8, 10), datetime.datetime(1983, 2, 22), 'Katowice', 'PodMiejska', '12-345', '333333333')
-e3 = Employee('Robert', 'Robert', datetime.datetime(2021, 9, 1), datetime.datetime(1992, 12, 12), 'Katowice', 'Miejska', '12-345', '567432567')
+e1 = Employee('Robert', 'Robert', datetime.datetime(2020, 5, 17),
+              datetime.datetime(1970, 1, 17), 'Katowice', 'Miejska',
+              '12-345', '808707606')
+e2 = Employee('Tomasz', 'Tomasz', datetime.datetime(2012, 8, 10),
+              datetime.datetime(1983, 2, 22), 'Katowice', 'PodMiejska',
+              '12-345', '333333333')
+e3 = Employee('Robert', 'Robert', datetime.datetime(2021, 9, 1),
+              datetime.datetime(1992, 12, 12), 'Katowice', 'Miejska',
+              '12-345', '567432567')
 
 s3 = Student('Kuba', 40)
 s4 = Student('Julia', 60)
