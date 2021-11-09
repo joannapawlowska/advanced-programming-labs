@@ -4,8 +4,9 @@ from datetime import datetime
 
 class Product:
 
-    def __init__(self, product_name: str, price: float, last_modified: datetime,
-                 description: str, inventory: Inventory):
+    def __init__(self, product_name: str, price: float,
+                 last_modified: datetime, description: str,
+                 inventory: Inventory):
         self._product_name = product_name
         self._price = price
         self._last_modified = last_modified
@@ -14,23 +15,23 @@ class Product:
 
     @property
     def product_name(self):
-        return self.product_name
+        return self._product_name
 
     @property
     def price(self):
-        return self.price
+        return self._price
 
     @property
     def last_modified(self):
-        return self.last_modified
+        return self._last_modified
 
     @property
     def description(self):
-        return self.description
+        return self._description
 
     @property
     def inventory(self):
-        return self.inventory
+        return self._inventory
 
     def __str__(self) -> str:
         return '%s(%s)' % (

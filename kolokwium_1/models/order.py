@@ -5,18 +5,14 @@ from datetime import datetime
 
 class Order:
 
-    # _order_id: int
-    # _date: datetime
-    # _products: list[Product]
-    # _status: str
-    # _client: Client
+    _order_id: int
+    _date: datetime
+    _products: list[Product]
+    _status: str
+    _client: Client
 
-    def __init__(self, order_id: int, date: datetime, products: list[Product], status: str, client: Client):
-        self._order_id = order_id
-        self._date = date
-        self._products = products
-        self._status = status
-        self._client = client
+    def __int__(self):
+        pass
 
     @property
     def order_id(self):
@@ -56,7 +52,7 @@ class Order:
 
     @client.setter
     def client(self, client: Client):
-        _client = client
+        self._client = client
 
     def __str__(self) -> str:
         return '%s(%s)' % (
@@ -65,10 +61,10 @@ class Order:
         )
 
     def calculate_total_price(self):
-        total_price = 0
+        total_price = 0.0
         for p in self._products:
             total_price += p.price
-        return total_price
+        return round(total_price, 2)
 
     def get_client_address(self):
         return self._client.address

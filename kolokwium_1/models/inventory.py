@@ -10,23 +10,23 @@ class Inventory:
 
     @property
     def address(self):
-        return self.address
+        return self._address
 
     @property
     def phone_number(self):
-        return self.phone_number
+        return self._phone_number
 
     @property
     def address2(self):
-        return self.address2
+        return self._address2
 
     @property
     def info(self):
-        return self.info
+        return self._info
 
     @property
     def email(self):
-        return self.email
+        return self._email
 
     def __str__(self) -> str:
         return '%s(%s)' % (

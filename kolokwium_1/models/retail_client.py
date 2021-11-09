@@ -10,7 +10,7 @@ class RetailClient(Client):
 
     @property
     def client_number(self):
-        return self.client_number
+        return self._client_number
 
     def __str__(self) -> str:
         return '%s(%s)' % (

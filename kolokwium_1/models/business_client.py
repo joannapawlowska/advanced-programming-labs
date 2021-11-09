@@ -10,7 +10,7 @@ class BusinessClient(Client):
 
     @property
     def company_address(self):
-        return self.company_address
+        return self._company_address
 
     def __str__(self) -> str:
         return '%s(%s)' % (
