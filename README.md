@@ -1,1 +1,1 @@
-# ap-lab-1
+# advanced-programming-labs
