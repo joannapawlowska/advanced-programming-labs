@@ -1,8 +1,11 @@
 from flask_restful import Resource
-from utils import get_all_movies
+
+from model.movie import Movie
+from utils import get_rows_from_csv
 
 
 class MovieView(Resource):
 
     def get(self):
-        return [movie.__dict__ for movie in get_all_movies()]
+        movie_rows = get_rows_from_csv('./static/movies.csv')
+        return [Movie(row[0], row[1], row[2]).__dict__ for row in movie_rows]
