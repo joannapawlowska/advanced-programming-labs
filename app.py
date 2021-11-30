@@ -1,10 +1,10 @@
 from flask import Flask
 from flask_restful import Api
 
-from view.movie_view import MovieView
-from view.rating_view import RatingView
-from view.tag_view import TagView
-from view.link_view import LinkView
+from src.view.movie_view import MovieView
+from src.view.rating_view import RatingView
+from src.view.tag_view import TagView
+from src.view.link_view import LinkView
 
 app = Flask(__name__)
 api = Api(app)
