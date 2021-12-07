@@ -15,4 +15,4 @@ api.add_resource(TagView, '/api/tags')
 api.add_resource(LinkView, '/api/links')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')

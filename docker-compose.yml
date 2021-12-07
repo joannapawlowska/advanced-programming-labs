@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    container_name: app
+    image: python:3.9-alpine
+    command: /bin/sh -c "cd /app && pip install -r requirements.txt && python app.py"
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+  app-from-dockerfile:
+    container_name: app-from-dockerfile
+    build: .
+    ports:
+      - 5001:5000
